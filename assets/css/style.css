@@ -100,7 +100,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 70px;
 }
 
 .logo {
@@ -113,8 +113,8 @@ header {
 }
 
 .logo img {
-  height: 75px;
-  /* Larger size for quality */
+  height: 50px;
+  /* Medium size */
   width: auto;
   transition: transform 0.3s ease;
 }
@@ -128,8 +128,7 @@ header {
 
 /* Ensure header accommodates the larger logo or lets it hang */
 header .nav-container {
-  height: 90px;
-  /* Increased slightly to fit logo */
+  height: 70px;
 }
 
 .nav-links {
@@ -165,9 +164,10 @@ header .nav-container {
   transition: all var(--transition-speed);
 }
 
-.lang-btn:hover {
+/* Increased specificity to override .nav-links a:hover */
+.nav-links .lang-btn:hover {
   background: var(--primary-color);
-  color: white;
+  color: white !important;
 }
 
 .mobile-toggle {
@@ -411,7 +411,7 @@ footer {
 @media (max-width: 768px) {
   .nav-links {
     position: fixed;
-    top: 80px;
+    top: 70px;
     left: 0;
     /* Changed from right to left for LTR default, will override for RTL */
     width: 100%;
